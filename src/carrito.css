@@ -1,0 +1,523 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+    scrollbar-gutter: auto;
+}
+
+
+/* Comienza NavSection */
+
+.nav-bar{
+    width: 100%;
+    height: 70px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color:white;
+    overflow: hidden; 
+    box-shadow: 0.3px 1px 0.3px 1px rgba(105, 104, 104, 0.2);
+    
+}
+
+.logo-nav{
+    padding: 40px;
+}
+
+.logo-nav p{
+    font-weight: 700;
+    font-size: larger;
+    color: #fd9b40;
+}
+
+
+.nav-bar ul{
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.nav-bar ul li{
+    display: inline-block;
+    padding-right: 25px;
+
+} 
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.nav-bar ul li a,
+.nav-bar ul li a:after,
+.nav-bar ul li a:before {
+  transition: all .5s;
+}
+
+.nav-bar ul li a:hover {
+    color: black;
+}
+
+.nav-bar ul li a{
+    position: relative;
+}
+
+.nav-bar ul li a:after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: black;
+    height: 1px;
+    margin-bottom: -7px;
+    
+}
+
+.nav-bar ul li a:hover::after{
+    width: 100%;
+}
+
+.nav-bar img{
+    padding-right: 30px;
+}
+/* Termina NavSection */
+
+/* Card1 */
+
+.purchasesSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 50px;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.purchases{
+    display: flex;
+    flex-direction: column;
+    max-width: 1100px;
+    gap: 50px;
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1100px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 3px 3px 3px rgb(236, 235, 235);
+    border: none;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+
+
+.image_container img{
+    width: 80px;
+    height: 70px;
+    border-radius: 10px;
+    
+}
+
+.text_container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.buttonsProduct{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0px 30px 0px 30px;
+
+    .delete{
+        padding: 10px;
+        border: none;
+        border: .3px solid red;
+        border-radius: 5px;
+        background-color: red;
+        color: white;
+        cursor: pointer;
+    }
+
+    .details{
+        padding: 10px;
+        border: none;
+        border: .3px solid blue;
+        background-color: white;
+        border-radius: 5px;
+        color: blue;
+        cursor: pointer;
+    }
+}
+
+.delete:hover{
+    transform: scale(1.05);
+}
+
+.details:hover{
+    transform: scale(1.05);
+}
+.separator {
+    display: flex;
+    border-left: 2px solid black; /* Borde izquierdo predeterminado */
+    height: 100px;
+}
+
+.priceSec {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    float: right;
+}
+
+@media (max-width: 830px) {
+    .cards {
+        flex-direction: column; /* Cambia la dirección de flex */
+    }
+
+    .buttonsProduct {
+        flex-direction: row; /* Asegura que los botones estén en fila */
+    }
+
+    .image_container img{
+        margin-bottom: 20px;
+    }
+
+    .text_container{
+        margin-bottom: 20px;
+    }
+
+    .separator {
+        border-top: 2px solid black; /* Aplica el borde superior */
+        width: 300px;
+        height: auto; /* Ajusta la altura según sea necesario */
+        margin-bottom: 10px; /* Añade un margen si es necesario */
+        margin-top: 20px;
+    }
+
+    .priceSec{
+        flex-direction: row;
+        margin-bottom: 10px;
+    }
+}
+
+.confirm-purchase {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid black;
+    width: 100%; /* Asegura que el borde ocupe el 100% del ancho del contenedor */
+    max-width: 700px; /* O cualquier otro valor que desees para limitar su ancho */
+    padding-top: 13px;
+    margin-bottom: 40px;
+    margin-left: 200px;
+    margin-right: 200px;
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+}
+
+@media (max-width: 830px) {
+    .confirm-purchase{
+        width: 500px;
+    }
+}
+
+.confirm-purchase .buttons-aside{
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+}
+
+
+.confirm-purchase .buttons-aside button{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.confirm-purchase .buttons-aside .finish{
+    border: 1px solid #fd9b40;
+    color: #fd9b40;
+    background-color: white;
+    cursor: pointer;
+}
+
+.confirm-purchase .buttons-aside .finish:hover{
+    transition: .3s all;
+    background-color: #fd9b40;
+    color: white;
+}
+
+.confirm-purchase .buttons-aside .continue{
+    border: 1px solid black;
+    color: black;
+    cursor: pointer;
+}
+
+.confirm-purchase .buttons-aside .continue:hover{
+    transition: .3s all;
+    background-color: black;
+    color: white;
+}
+
+.confirm-purchase .price-aside{
+    margin-left: 275px;
+}
+
+.card-purchase{
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    background-color: blue;
+    z-index: 2;
+    border-radius: 10px 0px 0px 0px;
+    height: 300%;
+    padding: 20px;
+    top: 0px;
+    right: 0px;
+}
+
+.card-purchase header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card-purchase header p{
+    color: white;
+    font-size: 20px;
+}
+
+
+.card-purchase header button{
+    background-color: white;
+    padding: 5px;
+    border-radius: 30px;
+    margin-left: 200px;
+    border: none;
+}
+
+.card-purchase header button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.credit-cards{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+
+    p{
+        color: white;
+        font-weight: 300;
+    }
+}
+
+.credit-cards .cards-types{
+    display: flex; 
+    flex-direction: row;
+    max-width: 300px;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.credit-cards .cards-types div{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 90px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid rgb(167, 162, 162);
+
+    img{
+        width: 60px;
+        height: 45px;
+    }
+}
+
+.credit-cards div:hover{
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.purchases-details{
+    margin-top: 30px;
+}
+
+.purchases-details input{
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+}
+
+.final-prices {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 30px;
+    margin-top: 30px;
+    border-top: 1px solid black;
+    color: white;
+    
+    div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.final-prices div span {
+    margin-left: auto;
+    text-align: right;
+}
+
+.pay-button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    animation: fadeIn 0.3s ease forwards;
+    border-radius: 5px;
+    border: none;
+    margin-top: 7px;
+    padding: 15px;
+}
+
+.pay-button:hover{
+    cursor: pointer;
+    transform: scale(1.01);
+}
+
+.pay-button span{
+    font-size: 17px;
+}
+
+.pay-button p{
+    margin-left: auto;
+    text-align: right;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.moneyExchange{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    margin: 40px 20px 10px 20px;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.moneyExchange .usd{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 15px;
+    span{
+      margin-left: 7px;  
+    }
+}
+
+.moneyExchange .eur{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    span{
+        margin-left: 7px;
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro con opacidad */
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+    display: none; /* Oculta inicialmente */
+}
+
+.cardContainer {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20; /* Asegura que esté por encima de la superposición */
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+  
+.close-card{
+    position: absolute;
+    top: 20px; /* Ajusta el espacio desde el borde superior */
+    right: 15px; /* Coloca la imagen en el borde derecho */
+    width: 24px; /* Tamaño del icono */
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+.text_containerProduct{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+    font-size: 22px
+}
+
+.img_containerProduct{
+    img{
+        width: 250px;
+        height: 100%; 
+        border-radius: 8px; 
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .cardContainer{
+        flex-direction: column;
+    }
+
+    .close-card{
+        top: 10px;
+    }
+
+    .img_containerProduct{
+        margin-top: 25px;
+        img{
+            width: 100%;
+            height: 200px;
+            
+        }
+    }
+}

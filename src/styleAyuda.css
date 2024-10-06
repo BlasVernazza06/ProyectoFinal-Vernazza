@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;  
+    font-family: "Josefin Sans", sans-serif;
+}
+
+
+/* Comienza NavSection */
+
+.nav-bar{
+    width: 100%;
+    height: 70px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    background-color:white;
+    overflow: hidden; 
+    box-shadow: 0.5px 0.7px 0.7px 0.7px rgba(0, 0, 0, 0.2);
+    
+}
+
+.logo-nav{
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+.logo-nav p{
+    font-weight: 700;
+    font-size: larger;
+    color: #fd9b40;
+}
+
+
+.nav-bar ul{
+    width: 100%;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.nav-bar ul li{
+    display: inline-block;
+    padding-right: 25px;
+    padding-top: 20px;
+
+} 
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .nav-bar{
+        height: 250px;
+    }
+
+    .nav-bar ul li{
+        display: block;
+        text-align: left;
+        padding: 10px;
+    }
+}
+
+.nav-bar ul li a,
+.nav-bar ul li a:after,
+.nav-bar ul li a:before {
+  transition: all .5s;
+}
+
+.nav-bar ul li a:hover {
+    color: black;
+}
+
+.nav-bar ul li a{
+    position: relative;
+}
+
+.nav-bar ul li a:after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: black;
+    height: 1px;
+    margin-bottom: -7px;
+    
+}
+
+.nav-bar ul li a:hover::after{
+    width: 100%;
+}
+
+.nav-bar img{
+    padding-right: 30px;
+}
+/* Termina NavSection */
+
+main{
+    background-color: #f5f4f4d0;
+}
+
+.Help-Section .title-help p {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 30px;
+}
+
+.Help-Section .subtitle-help p{
+    text-align: center;
+    padding-top: 15px;
+    font-weight: 200;
+
+}
+
+.Form-Help-Section{
+    margin-right: 100px;
+    margin-left: 100px;
+    padding-bottom: 30px;
+}
+
+.Form-Help-Section .Card-Form{
+    background-color: rgb(177, 224, 248);
+    width: 100%;
+    padding: 15px 15px;
+    margin-top: 30px;
+    border-radius: 10px;
+    
+}
+
+.button-submit-div{
+    display: flex;
+    justify-content: center;
+
+}
+
+.button-submit{
+    width: 14em;
+
+}
+
+.form-label{
+    text-align: left;
+}
+/* Comienza FooterSection  */
+
+footer{
+    background-color: white;
+    width: 100%;
+    border-top: 1px solid rgb(236, 229, 229);
+}
+
+.List{
+    list-style: none;
+    text-decoration: none;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 640px) {
+    .List{
+        display: block;
+        text-align: center;
+    }
+}
+
+.List li{
+    padding: 10px 25px;
+    list-style: none;
+}
+
+.List li a{
+    text-decoration: none;
+    color: black;
+}
+
+.ComplementText{
+    text-align: center;
+    padding-bottom: 15px;
+    color: black;
+}
+
+/* Termina FooterSection  */

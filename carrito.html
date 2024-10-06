@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vista del carrito de compras en AeroViajes. Revisa tus compras y finaliza tu pedido.">
+    <link rel="stylesheet" href="src/carrito.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Carrito de Compras - AeroViajes</title>
+</head>
+<body>
+    <header>
+        <div class="nav-bar">
+            <div class="logo-nav animate__animated animate__fadeInDown">
+                <p>AeroViajes</p>
+            </div>
+            <ul class="nav-list animate__animated animate__fadeInDown">
+                <li><a href="./Productos.html">Shop</a></li>
+            </ul>
+
+            <img src="src/images/icons8-carrito-de-compras-32.svg" alt="Icono de carrito de compras" class="animate__animated animate__fadeInDown">
+        </div>
+    </header>
+    <main>
+        <section class="purchasesSection">
+            <header class="title">
+                <h1>Mis Compras</h1>
+            </header>
+            <div class="purchases" id="purchasesSec">
+                <!-- Aquí se cargarán las compras -->
+            </div>
+            <div class="confirm-purchase">
+                <aside class="buttons-aside">
+                    <button onclick="togglePurchaseDetails()" class="finish">Finalizar Compra</button>
+                    <a href="Productos.html"><button class="continue">Seguir Comprando</button></a>
+                </aside>
+            </div>
+            <aside class="card-purchase" id="togglePurchase">
+                <header>
+                    <p>Detalles de Compra</p>
+                    <button onclick="destogglePurchaseDetails()">
+                        <img src="src/images/icons8-flecha-32.png" alt="Cerrar detalles de compra">
+                    </button>
+                </header>
+                <section class="credit-cards">
+                    <p>Tipo de Interés %</p>
+                    <section class="cards-types">
+                        <div class="inter"><p>0%</p></div>
+                        <div class="inter"><p>5%</p></div>
+                        <div class="inter"><p>10%</p></div>
+                        <div class="inter"><p>15%</p></div>
+                        <div class="inter"><p>10%</p></div>
+                        <div class="inter"><p>20%</p></div>
+                    </section>
+                </section>
+                <footer class="final-prices">
+                    <div class="subtotal"><p>Subtotal:</p> <span id="subtotal-price">$</span></div>
+                    <div class="interest"><p>Intereses:</p> <span id="intereses">0%</span></div>
+                    <div class="total"><p>Total:</p> <span id="final-price">$</span></div>
+                    <button onclick="destogglePurchaseDetails()" class="pay-button">
+                        <span id="button-price"></span>
+                        <p>Finalizar Compra</p>
+                    </button>
+                </footer>
+                <section class="moneyExchange">
+                    <h3>Precio en Otras Monedas</h3>
+                    <div id="usd" class="usd">
+                        <img src="./src/images/icon-estados-unidos.png" alt="Icono de la bandera de Estados Unidos">
+                        <span>USD:</span>
+                        <span id="valueUSD"></span>
+                    </div>
+                    <div id="eur" class="eur">
+                        <img src="./src/images/icon-bandera-de-europa.png" alt="Icono de la bandera de Europa">
+                        <span>EUR:</span>
+                        <span id="valueEUR"></span>
+                    </div>
+                </section>
+            </aside>
+        </section>
+    </main>
+    <script src="src/JS/Carrito.js"></script>
+</body>
+</html>

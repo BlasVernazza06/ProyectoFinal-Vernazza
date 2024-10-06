@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;  
+    font-family: "Josefin Sans", sans-serif;
+}
+
+
+/* Comienza NavSection */
+
+.nav-bar{
+    width: 100%;
+    height: 70px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color:white;
+    overflow: hidden; 
+    box-shadow: 0.5px 0.7px 0.7px 0.7px rgba(0, 0, 0, 0.2);
+    
+}
+
+.logo-nav{
+    padding: 40px;
+}
+
+.logo-nav p{
+    font-weight: 700;
+    font-size: larger;
+    color: #fd9b40;
+}
+
+
+.nav-bar ul{
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.nav-bar ul li{
+    display: inline-block;
+    padding-right: 25px;
+
+} 
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-bar ul li a,
+.nav-bar ul li a:after,
+.nav-bar ul li a:before {
+  transition: all .5s;
+}
+
+.nav-bar ul li a:hover {
+    color: black;
+}
+
+.nav-bar ul li a{
+    position: relative;
+}
+
+.nav-bar ul li a:after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: black;
+    height: 1px;
+    margin-bottom: -7px;
+    
+}
+
+.nav-bar ul li a:hover::after{
+    width: 100%;
+}
+
+.nav-bar img{
+    padding-right: 30px;
+}
+/* Termina NavSection */
+
+/* Comienza ShopSection  */
+
+/* Comienza First-products*/
+
+.Shop-Section{
+    background-color: #f5f4f4d0;
+    padding-bottom: 0px;
+}
+
+.title-Shop{
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    padding: 50px 0px 90px 0px;
+}
+
+.first-shop-section{
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto 20px auto; 
+    border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+.first-shop-section p{
+    font-size: 30px;
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+
+.grid-Products{
+    display: grid;
+    grid-template-areas: 
+    "Product1 Product2 Product3 Product4";
+    grid-template-columns: 350px 350px 350px 350px;
+    grid-template-rows: 500px;
+    justify-content: center;
+    align-content: center;
+    gap: 80px;
+}
+
+.Product-1{
+    grid-area: Product1;
+}
+
+.Product-2{
+    grid-area: Product2;
+}
+
+.Product-3{
+    grid-area: Product3;
+}
+
+.Product-4{
+    grid-area: Product4;
+}
+
+.animate__zoomIn{
+    --animate-duration: 1.3s;
+}
+
+/* Media Queries */
+@media (max-width: 1536px) {
+    .grid-Products{
+        grid-template-areas: 
+        "Product1 Product2"
+        "Product3 Product4";
+        grid-template-columns: 350px 350px;
+        grid-template-rows: 500px 500px;
+        gap: 80px;
+        margin: 0 10px;
+    }
+
+    .first-shop-section{
+        width: 80%;
+    }
+}
+
+@media (max-width: 1280px) {
+    .grid-Products{
+        gap: 50px;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .grid-Products{
+        gap: 15px;
+    }
+
+    .first-shop-section{
+        width: 80%;
+    }
+}
+
+@media (max-width: 980px) {
+    .grid-Products{
+        grid-template-areas: 
+        "Product1"
+        "Product2" 
+        "Product3" 
+        "Product4";
+        grid-template-columns: 350px;
+        grid-template-rows: repeat(4, 500px);
+        gap: 15px;
+        margin: 0 20px;
+    }
+
+    .first-shop-section{
+        width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .first-shop-section{
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;  
+    }
+}
+
+@media (max-width: 640px) {
+    .first-shop-section{
+        margin-left: auto;
+        width: 74%;  
+    }
+}
+
+
+/* Termina First-products*/
+
+
+.Products{
+    background-color: aqua;
+    display: inline-block;
+    align-items: center;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    background-color: #fcf8f8;
+    border: 1px solid rgb(221, 225, 232);
+    overflow: hidden;
+}
+
+.Products:hover{
+    transform: scale(1.05);
+    transition: 2s all;
+    box-shadow: 2px 2px 2px 2px rgba(241, 238, 238, 0.911);
+}
+
+.Products img{
+    width: 100%;
+    height: 34%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.Product-text{
+    padding-left: 20px;
+}
+
+.Products .title-card{
+    font-weight: 900;
+    font-size: large;
+    padding-top: 40px;
+}
+
+.Products .subtitle-card{
+    font-size: large;
+    font-weight: 300;
+    padding-top: 15px;
+    
+
+}
+
+.Products .subtitle-card strong{
+    font-weight: 500;
+}
+
+.Products .subtitle-card img{
+    width: 16px;
+    padding-top: 20px;
+}
+
+.Products .subtitle-card span{
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.footer-product{
+    display: inline-flex;
+    width: 100%;
+    border-top: 1px solid rgb(226, 221, 221);
+    justify-content: space-between;
+    margin-top: 100px;
+    
+    
+}
+
+.footer-text{
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+.footer-text .first{
+    font-size: 13px;
+    padding-bottom: 4px;
+}
+
+.footer-text .second span{
+    font-weight: 600;
+    font-size: 24px;
+    padding-bottom: 4px;
+}
+
+.footer-text .third{
+    font-size: 13px;
+}
+
+.Products .button-section{
+    height: 100%;
+    padding: 15px;
+}
+
+.Products .Buy-Button{
+    width: 90px;
+    height: 40px;
+    border-radius: 7px; 
+    background-color: #f07d11;
+    border: none;
+    color: rgb(0, 0, 0);
+    
+}
+
+.Buy-Button:hover{
+    cursor: pointer;
+    transition-duration: 0.2s;
+    background-color: white;
+    border: 1px solid #eca058;
+    color: #f19e4f;
+}
+
+
+
+
+
+/* Termina ShopSection  */
+
+
+/* Comienza InfoSection  */
+
+.info-section{
+    background-color: #f5f4f4d0;
+}
+
+.info-section .title-InfoShop{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    padding: 100px 0px 50px;
+}
+
+.grid-InfoShops{
+    display: grid;
+    grid-template-areas: 
+    "grid-item1 grid-item2 grid-item3"
+    
+    ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding-bottom: 30px;
+    
+}
+
+.grid-item1{
+    grid: grid-item1;
+    padding:  0px 20px;
+    border-right: 1px solid rgb(224, 224, 224);
+}
+
+.grid-item2{
+    grid: grid-item2;
+    padding: 0px 20px;
+    border-right: 1px solid rgb(224, 224, 224);
+}
+
+.grid-item3{
+    grid: grid-item3;
+    padding: 0px 20px;
+}
+
+.animate__bounceIn{
+    --animate-duration: 1.6s;
+}
+
+@media (max-width: 740px) {
+    .grid-InfoShops{
+        display: grid;
+        grid-template-areas: 
+        "grid-item1" 
+        "grid-item2" 
+        "grid-item3"
+        
+        ;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+        gap: 50px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: #f5f4f4d0;
+    }
+
+    .grid-InfoShops p{
+        padding: 0px 50px;
+    }
+    
+}
+
+
+/* Termina InfoSection  */
+
+/* Comienza FooterSection  */
+
+footer{
+    background-color: white;
+    width: 100%;
+    border-top: 1px solid rgb(236, 229, 229);
+}
+
+.List{
+    list-style: none;
+    text-decoration: none;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 640px) {
+    .List{
+        display: block;
+        text-align: center;
+    }
+}
+
+.List li{
+    padding: 10px 25px;
+    list-style: none;
+}
+
+.List li a{
+    text-decoration: none;
+    color: black;
+}
+
+.ComplementText{
+    text-align: center;
+    padding-bottom: 15px;
+    color: black;
+}
+
+/* Termina FooterSection  */
