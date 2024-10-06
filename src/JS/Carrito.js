@@ -204,7 +204,7 @@ total();
 
 // Función para convertir el total de la compra a la moneda de destino
 function convertirMoneda(totalEnMonedaLocal, aMoneda) {
-    const apiKey = "ea02fc68828c14fd396cb726";
+    const apiKey = "203d1f36548366fecfe80a8f";
     const divUSD = document.getElementById("valueUSD");
     const divEUR = document.getElementById("valueEUR");
     
